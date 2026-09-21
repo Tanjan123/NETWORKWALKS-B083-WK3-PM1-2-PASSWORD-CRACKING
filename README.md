@@ -43,7 +43,6 @@
 * [Results Summary](#-results-summary)
 * [Key Learning Outcomes](#-key-learning-outcomes)
 * [Security Notes](#-security-notes)
-* [Evidence](#-evidence)
 * [Author](#-author)
 * [Project Information](#-project-information)
 
@@ -163,6 +162,8 @@ The installation was verified by locating the `john.exe` executable and preparin
 
 ![](/Evidence/johnyConfiguration1.png)
 
+![](/Evidence/johnyConfiguration2.png)
+
 ### Configuration Flow
 
 ```text
@@ -244,6 +245,12 @@ The extracted PDF hash was loaded into Johnny for password recovery.
 9. Use the recovered password to open the encrypted PDF.
 10. Verify successful decryption.
 
+![](/Evidence/PasswordHash1.png)
+
+![](/Evidence/PasswordHash2.png)
+
+![](/Evidence/PasswordHash3.png)
+
 ### Attack Workflow
 
 ```text
@@ -272,12 +279,16 @@ Verification
 
 The first provided PDF was successfully decrypted.
 
+![](/Evidence/Result1.png)
+
 **Result:**
 
 ```text
 Password recovered successfully
 PDF decrypted successfully
 ```
+
+![](/Evidence/Result2.png)
 
 **Training Flag:**
 
@@ -295,6 +306,8 @@ The same password was applicable because the PDF contained the same hash.
 
 **Training Flag:**
 
+![](/Evidence/Result3.png)
+
 ```text
 nw{networkwalks_persistence_jtr_270521}
 ```
@@ -309,17 +322,23 @@ A separate PDF hash was extracted and saved as:
 hash3.txt
 ```
 
+![](/Evidence/Result4.png)
+
 The password recovered through John the Ripper was:
 
 ```text
 1qaz2wsx
 ```
 
+![](/Evidence/Result5.png)
+
 The decrypted PDF contained the following training flag:
 
 ```text
 nw{networkwalks_flag_260821_1}
 ```
+
+![](/Evidence/Result6.png)
 
 ---
 
@@ -340,6 +359,8 @@ The Networkwalks Hash Calculator was opened:
 https://networkwalks.com/hash-calculator/
 
 The provided locked PDF was uploaded to the tool.
+
+![](/Evidence/HashCal1.png)
 
 The tool generated a PDF password hash beginning with:
 
@@ -372,6 +393,10 @@ https://networkwalks.com/password-cracker/
 The extracted PDF hash was pasted into the Password Cracker.
 
 The password-recovery process was then started to identify the corresponding password.
+
+![](/Evidence/PassCrac1.png)
+
+![](/Evidence/PassCrac2.png)
 
 ### Workflow
 
@@ -453,66 +478,6 @@ The techniques documented here should only be used against systems and files for
 
 ---
 
-# 📸 Evidence
-
-Screenshots and supporting evidence should be stored inside the repository's `evidence/` directory.
-
-### Recommended Evidence Structure
-
-```text
-evidence/
-├── 01-john-installation.png
-├── 02-johnny-configuration.png
-├── 03-pdf-hash-extraction.png
-├── 04-hash1-file.png
-├── 05-johnny-cracking-process.png
-├── 06-pdf01-decryption.png
-├── 07-pdf02-decryption.png
-├── 08-pdf03-hash.png
-├── 09-pdf03-password-recovery.png
-├── 10-networkwalks-hash-calculator.png
-├── 11-networkwalks-password-cracker.png
-└── 12-pdf-decryption-verification.png
-```
-
-### Evidence Index
-
-| No. | Evidence                         |
-| --: | -------------------------------- |
-|  01 | John the Ripper installation     |
-|  02 | Johnny configuration             |
-|  03 | PDF hash extraction              |
-|  04 | `hash1.txt` configuration        |
-|  05 | Johnny password-cracking process |
-|  06 | First PDF decrypted              |
-|  07 | Second PDF decrypted             |
-|  08 | Third PDF hash                   |
-|  09 | Third PDF password recovery      |
-|  10 | Networkwalks Hash Calculator     |
-|  11 | Networkwalks Password Cracker    |
-|  12 | PDF decryption verification      |
-
-### Evidence Example
-
-Replace the placeholders below with your actual screenshots:
-
-```md
-### 01 — John the Ripper Installation
-
-![John the Ripper Installation](evidence/01-john-installation.png)
-
-### 02 — Johnny Configuration
-
-![Johnny Configuration](evidence/02-johnny-configuration.png)
-
-### 03 — PDF Hash Extraction
-
-![PDF Hash Extraction](evidence/03-pdf-hash-extraction.png)
-```
-
-> **Evidence Hygiene:** Avoid uploading unnecessary sensitive information, personal credentials, real passwords, private keys, tokens, or unrelated system information to the repository.
-
----
 
 # 👤 Author
 
