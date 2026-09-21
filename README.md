@@ -161,6 +161,8 @@ The installation was verified by locating the `john.exe` executable and preparin
 6. Select `john.exe`.
 7. Save the configuration.
 
+[](/Evidence/johnyConfiguration1.png)
+
 ### Configuration Flow
 
 ```text
